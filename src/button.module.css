@@ -1,0 +1,20 @@
+.warning{
+    background-color: red;
+    color: black;
+    border: solid black 1px;
+    margin: 4px;
+    border-radius: 4px 4px 4px 4px;
+}
+
+.error{
+    background-color: yellow;
+    color: black;
+    border: solid black 1px;
+    border-radius: 4px 4px 4px 4px;
+}
+
+.inputt{
+    border-color: green;
+    border-radius: 18px
+    
+}

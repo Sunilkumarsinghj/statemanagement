@@ -3,7 +3,9 @@ import './App.css';
 import './index2.css'
 import BTNmodule from './button.module.css';
 import { useState } from 'react';
+import 'react-notifications/lib/notifications.css';
 import { questions  } from './questions';
+import { NotificationContainer, NotificationManager } from 'react-notifications';
 
 function App() {
  let[status,setStatus]=useState(false);
@@ -11,8 +13,16 @@ function App() {
  let[manuStatus,setManustatus]=useState(false);
  let[modalShow,setModalShow]=useState(false);
  let[showAns,setShowAns]=useState(questions[0].id)
+ let notificationType=()=>{
+  //NotificationManager.info("info message");
+ // NotificationManager.success("successfully done",'code working'); 
+ //NotificationManager.warning("warning","not in use yet");
+ NotificationManager.error("error",'code not working');
+}
   return (
     <div className="App">
+      <NotificationContainer/>
+      <button className={BTNmodule.warning} onClick={()=>notificationType()}>click</button> 
        
       <button className='en' onClick={()=>setModalShow(true)}>Enquiry now</button>
       <div onClick={()=>setModalShow(false)}  className={`modalOverLay ${(modalShow)?'modalShow':''}`}></div>
