@@ -115,4 +115,7 @@
     transform: scaleY(1) !important;
     padding: 10px !important;
 }
+.page{
+    width: 10px;
+}
 
